@@ -24,7 +24,7 @@ import { CreatePost } from "@/lib/schemas";
 // import useMount from "@/hooks/useMount";
 // import { createPost } from "@/lib/actions";
 // import { CreatePost } from "@/lib/schemas";
-// import { UploadButton } from "@/lib/uploadthing";
+import { UploadButton } from "@/lib/uploadthing";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
@@ -65,11 +65,11 @@ function CreatePage() {
         <Form {...form}>
           <form 
              onSubmit={form.handleSubmit(async (values) => {
-                // const res = await createPost(values);
-                // if (res) {
-                //   return toast.error(<Error res={res} />);
-                // }
-                console.log(values);
+                const res = await createPost(values);
+                if (res) {
+                  return toast.error(<Error res={res} />);
+                }
+                // console.log(values);
               })} 
               className="space-y-4 ">
              {!!fileUrl ? (
@@ -91,7 +91,7 @@ function CreatePage() {
                     <FormItem>
                       <FormLabel htmlFor="picture">Picture</FormLabel>
                       <FormControl>
-                        {/* <UploadButton
+                        <UploadButton
                           endpoint="imageUploader"
                           onClientUploadComplete={(res) => {
                             form.setValue("fileUrl", res[0].url);
@@ -101,7 +101,7 @@ function CreatePage() {
                             console.error(error);
                             toast.error("Upload failed");
                           }}
-                        /> */}
+                        />
                       </FormControl>
                       <FormDescription>
                         Upload a picture to post.
