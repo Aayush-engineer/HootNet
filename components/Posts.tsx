@@ -1,7 +1,16 @@
-function Posts() {
-  // Todo: implement data fetching logic here....
+import { fetchPosts } from "@/lib/data";
+import Post from "./Post";
+
+async function Posts() {  
+    const posts = await fetchPosts();
+  
   return <>
-    {/* Map through posts */}post
+    {posts.map((post) => (
+      <Post
+        key={post.id}
+        post={post}
+      />
+    ))}
   </>
 }
 
