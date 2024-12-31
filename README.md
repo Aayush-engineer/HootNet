@@ -1,51 +1,49 @@
-# Hoot
+# Skillset - A Community Platform for Teachers and Students
 
-A scalable and feature-rich social media web application built with the latest technologies including Next.js 14, Server Actions, Prisma, Neon, MySQL, NextAuth, and more.
+**Skillset** is a feature-rich online platform designed to connect teachers, tutors, and students. This platform provides tools for creating, managing, and sharing live classes, courses, and educational content. Teachers can offer personalized tutoring, while students can access classes, track progress, and engage with learning materials in an interactive way.
 
-## Table of Contents
-- [Introduction](#introduction)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Environment Variables](#environment-variables)
-  - [Database Setup](#database-setup)
-  - [Running the Application](#running-the-application)
-- [Contributing](#contributing)
-- [License](#license)
+### Features
+- **Live Classes**: Teachers can host live classes, workshops, and sessions for students in real-time with video streaming and interactive tools.
+- **Course Creation**: Teachers can create and organize full courses with modules, assignments, and quizzes.
+- **Interactive Learning**: Real-time quizzes, whiteboards, student discussions, and live feedback help increase engagement.
+- **Monetization**: Teachers can monetize their content through subscriptions, pay-per-class, and tip features.
+- **Student Dashboard**: Personalized learning path, progress tracking, and access to all enrolled classes.
+- **Payment Integration**: Integrated payment system via **Stripe** for seamless class bookings, course purchases, and teacher payouts.
+- **Certification**: Teachers can offer certification upon course completion.
+- **AI-Powered Recommendations**: AI-powered content recommendations based on student preferences, interests, and progress.
+- **Freelance Marketplace**: Teachers can list their services and offer one-on-one tutoring or specialized classes.
 
-## Introduction
-Hoot is a modern social media web application designed to be scalable and maintainable. Built with a cutting-edge tech stack, it offers a seamless user experience and robust performance.
+### Tech Stack
+- **Frontend**: Next.js 14, React, Tailwind CSS
+- **Backend**: Node.js, Express
+- **Database**: Prisma ORM, Neon (PostgreSQL), MySQL
+- **Authentication**: Clerk (for secure user authentication and management)
+- **Payment Gateway**: Stripe
+- **File Storage**: Cloudinary AI (for media uploads, course materials, and AI-generated content)
+- **AI**: Custom AI models for content recommendations and personalized learning
+- **Hosting/Deployment**: Vercel
 
-## Features
-- User Authentication and Authorization (NextAuth)
-- Real-time Updates
-- Scalable Database (PlanetScale, MySQL)
-- API Routes and Server Actions
-- Responsive Design
-- Post Creation and Management
-- User Profiles
-- Follower/Following System
-- Commenting and Liking System
+### Why Choose Skillset?
+- **Tailored for Education**: Unlike general video conferencing tools like Zoom, Skillset is built specifically for educators and students, with features focused on teaching, learning, and community-building.
+- **Interactive Tools**: Engaging tools like live quizzes, whiteboards, and real-time feedback keep students involved in the learning process.
+- **Affordable & Scalable**: Teachers can monetize their content easily and scale their teaching business. Students can find personalized learning experiences at competitive prices.
+- **AI Features**: Skillset leverages AI to recommend relevant courses, tutoring, and content for students, enhancing the learning experience.
+- **Focus on Small Classes and Tutoring**: Unlike massive platforms, Skillset allows teachers to offer small, focused classes and one-on-one tutoring.
 
-## Tech Stack
-- **Framework:** Next.js 14
-- **Database:** PlanetScale (MySQL)
-- **ORM:** Prisma
-- **Authentication:** NextAuth
-- **Deployment:** Vercel
-- **Styling:** Tailwind CSS
+---
 
-## Getting Started
+## Setup Instructions
 
 ### Prerequisites
-- Node.js (>= 14.x)
-- npm or yarn
-- MySQL database (PlanetScale recommended)
 
-### Installation
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/HootSocial.git
-   cd Hoot
+Make sure you have the following installed on your system:
+- **Node.js** (version 16 or above)
+- **Yarn** or **npm**
+- **PostgreSQL** or **MySQL** (depending on the database choice)
+- **Cloudinary account** (for image/video storage)
+- **Stripe account** (for payment integration)
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/skillset.git
+cd skillset
